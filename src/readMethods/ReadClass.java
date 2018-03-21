@@ -16,10 +16,13 @@ public class ReadClass {
     }
 
     public static void fileToString(String fileDirectory, String fileString) {
+        String fileString = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(fileDirectory))) {
-             fileString = readLongString(reader);
+              fileString = readLongString(reader);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
+        } finally {
+            return fileString;
         }
     }
 }

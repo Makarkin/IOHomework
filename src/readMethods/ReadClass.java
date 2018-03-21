@@ -20,7 +20,6 @@ public class ReadClass {
              fileString = readLongString(reader);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
-
         }
     }
 }
